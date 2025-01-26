@@ -36,6 +36,7 @@
     npm install
     npx nodemon src/index.js
     ```
+4. Работы сервера можно проверить на http://localhost:3000/api/tasks
 
 ## Настройка БД
 **Таблица: `users`**
