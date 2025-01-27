@@ -53,7 +53,11 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP NOT NULL DEFAULT NOW(),  -- Время создания пользователя
     updated_at TIMESTAMP NOT NULL DEFAULT NOW()   -- Время последнего обновления пользователя
 );
+```
+**Таблица: `tasks`**
 
+Таблица `tasks` хранит информацию о заданиях.
+```sql
 CREATE TABLE IF NOT EXISTS tasks (
     id SERIAL PRIMARY KEY,                          -- Уникальный идентификатор задачи
     title VARCHAR(255) NOT NULL,                    -- Название задачи
@@ -69,7 +73,10 @@ CREATE TABLE IF NOT EXISTS tasks (
         ON DELETE CASCADE                           -- Удаление задач, если пользователь удалён
         ON UPDATE CASCADE
 );
+```
+**Трииггер и функция для `updated_at`
 
+```sql
 CREATE OR REPLACE FUNCTION update_updated_at_column()
 RETURNS TRIGGER AS $$
 BEGIN
