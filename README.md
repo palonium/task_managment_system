@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS tasks (
         ON UPDATE CASCADE
 );
 ```
-**Трииггер и функция для `updated_at`
+**Трииггер и функция для `updated_at`**
 
 ```sql
 CREATE OR REPLACE FUNCTION update_updated_at_column()
